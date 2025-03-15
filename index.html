@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Splitter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <h1>Expense Splitter</h1>
+        <p>Split expenses easily among friends or colleagues!</p>
+      </header>
+
+      <!-- Step 1: Enter Expense Details -->
+      <section id="step1" class="form-container">
+        <h2>Step 1: Enter Expense Details</h2>
+        <form id="expenseForm">
+          <div class="form-group">
+            <label for="amount">Amount (₹):</label>
+            <input type="number" id="amount" placeholder="e.g., 1000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" id="description" placeholder="e.g., Dinner" required>
+          </div>
+
+          <div class="form-group">
+            <label for="members">Number of Members:</label>
+            <input type="number" id="members" placeholder="e.g., 3" required>
+          </div>
+
+          <button type="button" id="nextStep1" class="btn">Next</button>
+        </form>
+      </section>
+
+      <!-- Step 2: Enter Member Names -->
+      <section id="step2" class="form-container hidden">
+        <h2>Step 2: Enter Member Names</h2>
+        <form id="memberForm">
+          <div id="memberInputs" class="form-group"></div>
+          <button type="button" id="nextStep2" class="btn">Next</button>
+        </form>
+      </section>
+
+      <!-- Step 3: Display Split Amount -->
+      <section id="step3" class="form-container hidden">
+        <h2>Step 3: Split Amount</h2>
+        <div id="splitResult" class="result-container"></div>
+        <button type="button" id="resetForm" class="btn">Start Over</button>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
